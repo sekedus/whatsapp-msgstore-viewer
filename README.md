@@ -21,7 +21,7 @@ Pre-built binaries are available on the releases page.
   * Ensure `Python` (version 3.9 or higher) is installed (Or better yet create and activate a virtual environment).
   * Clone the repository
   ```bash 
-  git clone https://github.com/abdeladim-s/whatsapp-msgstore-viewer 
+  git clone https://github.com/absadiki/whatsapp-msgstore-viewer 
   ```
   * Install the requirements
   ```bash 
