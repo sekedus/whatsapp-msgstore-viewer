@@ -17,14 +17,16 @@ class MainScreenModel(BaseScreenModel):
     def get_contact_chats(self):
         contact_chat_list = self.base.fetch_contact_chats()
         if self.base.contacts is not None:
-            # users with their display names
             for contact_chat in contact_chat_list:
-                try:
-                    contact_chat['user'] = self.base.contacts[contact_chat['raw_string_jid']]['display_name'] + \
-                                           f" <{contact_chat['user']}> "
-
-                except KeyError:
-                    print(f"Contact {contact_chat['raw_string_jid']} does not exist")
+                raw_jid = contact_chat.get('raw_string_jid')
+                if raw_jid in self.base.contacts:
+                    display_name = self.base.contacts[raw_jid].get('display_name', '')
+                    if display_name:
+                        contact_chat['user'] = f"{display_name} <{contact_chat['user']}>"
+                    else:
+                        contact_chat['user'] = f"{contact_chat['user']}"
+                else:
+                    print(f"Contact {raw_jid} does not exist")
         return contact_chat_list
 
     def get_group_chats(self):
