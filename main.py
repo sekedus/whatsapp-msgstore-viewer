@@ -40,9 +40,9 @@ os.environ['KIVY_TEXT'] = 'pil'
 from kivy.resources import resource_add_path
 
 from kivy import Config
-from PIL import ImageGrab
+from kivy.core.window import Window
 
-resolution = ImageGrab.grab().size
+resolution = Window.size
 height = int(resolution[1] * 0.9)
 # width = str(int(resolution[0]/3))
 
