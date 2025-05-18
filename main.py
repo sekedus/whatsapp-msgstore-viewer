@@ -5,7 +5,7 @@
 Whatsapp Msgstore Viewer(WMV)
 WMV is a free, open source and cross-platform app to decrypt, read and view the Whatsapp msgstore.db database.
 
-(C) 2023 [abdeladim-s](https://github.com/abdeladim-s)
+(C) 2023 [absadiki](https://github.com/absadiki)
 
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU General Public License as published by the Free Software
@@ -18,23 +18,18 @@ You should have received a copy of the GNU General Public License along with
 this program. If not, see <http://www.gnu.org/licenses/>.
 """
 
-__author__ = "Abdeladim S."
+__author__ = "absadiki"
 __copyright__ = "Copyright 2023"
-__credits__ = ["credits"]
-__deprecated__ = False
 __license__ = "GPLv3"
-__maintainer__ = "developer"
-__status__ = "Production"
 __version__ = "1.1.2"
-__github__ = "https://github.com/abdeladim-s/whatsapp-msgstore-viewer"
+__github__ = "https://github.com/absadiki/whatsapp-msgstore-viewer"
 
 import importlib
 import os
-import pkgutil
 import sys
 
 
-# To fix the text engine for some languages like Arabic
+# Set KIVY_TEXT to pil to use the PIL text engine
 os.environ['KIVY_TEXT'] = 'pil'
 
 from kivy.resources import resource_add_path
