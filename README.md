@@ -18,7 +18,8 @@ Free, open source and cross-platform app to decrypt, read and view the Whatsapp 
 Pre-built binaries are available on the releases page. 
 (Soon) 
 * ### From source
-  * Ensure `Python` (version 3.9 or higher) is installed (Or better yet create and activate a virtual environment).
+  * Make sure you’re using Python 3.9
+  * Create and activate a virtual environment.
   * Clone the repository
   ```bash 
   git clone https://github.com/absadiki/whatsapp-msgstore-viewer 
@@ -31,6 +32,7 @@ Pre-built binaries are available on the releases page.
   ```bash 
   python main.py 
   ```
+> **Note:** Ubuntu users may run into some setup quirks. For guidance, see [#19](https://github.com/absadiki/whatsapp-msgstore-viewer/issues/19) 
 
 # Usage
 To use the app, you will need:
@@ -69,7 +71,7 @@ Follow these steps in order to add support to other schemas (see `db/v1/db.py` a
   - You might face an issue where the messages are being displayed in a wierd way (square characters).
   This is probably a font issue. To fix that, search for a font that supports your language, and on the login screen, go to
   `advanced settings` and provide the path to your font.
-  - For RTL languages, please see [RTL Support #8](https://github.com/abdeladim-s/whatsapp-msgstore-viewer/discussions/8)
+  - For RTL languages, please see [RTL Support #8](https://github.com/absadiki/whatsapp-msgstore-viewer/discussions/8)
 
 # Contributing
 If you find a bug, have a suggestion or feedback, please open an issue for discussion.
