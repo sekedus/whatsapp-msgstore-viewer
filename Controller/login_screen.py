@@ -4,6 +4,7 @@ import traceback
 from typing import NoReturn
 
 import multitasking
+import logging
 
 from Utility.Utils import check_path, strip_quotes
 
@@ -79,9 +80,9 @@ Submit an issue on our Github page to help you add support to your database sche
         err = """
 Unfortunately, the decryption of the database was not successful.
 Maybe you didn't provide the right key or the file is corrupted or the version is not supported.
-This app is using the `WhatsApp-Crypt14-Crypt15-Decrypter` library under the hood. 
+This app is using the `wa-crypt-tools` library under the hood. 
 Visit their Github page for more information or to get some help:
-<https://github.com/ElDavoo/WhatsApp-Crypt14-Crypt15-Decrypter>
+<https://github.com/ElDavoo/wa-crypt-tools>
         """
         print(traceback.format_exc())
         self.view.hide_dialog()
@@ -103,6 +104,7 @@ Visit their Github page for more information or to get some help:
         # decrypting msgstore
         if self.view.app.wa_file is not None:
             try:
+                logging.info("Decrypting wa.db ...")
                 self.update_dialog("Decrypting wa.db ...")
                 enc_db = self.view.app.wa_file
                 dec_db = enc_db + '-decrypted.db'
@@ -113,6 +115,7 @@ Visit their Github page for more information or to get some help:
                 self.show_decryption_error(e)
                 os.remove(dec_db)
         try:
+            logging.info("Decrypting msgstore.db ...")
             self.update_dialog("Decrypting msgstore.db ...")
             enc_db = self.view.app.msgstore_file
             dec_db = enc_db + '-decrypted.db'
