@@ -1,11 +1,11 @@
-# whatsapp Msgstore Viewer
+# Whatsapp Msgstore Viewer
 Free, open source and cross-platform app to decrypt, read and view the Whatsapp `msgstore.db` database.
 
 <p align="center">
   <img src="./assets/demo/demo_gif_2.gif">
 </p>
 
-# Features
+## Features
 * View contact and group chats. 
 * View call logs with their durations.
 * Easy access to media files (images, audios and videos) from inside the chat, if the local Whatsapp directory has been provided. 
@@ -13,7 +13,7 @@ Free, open source and cross-platform app to decrypt, read and view the Whatsapp 
 * Cross-platform (Should work on Linux, Windows and Mac)
 
 
-# Installation
+## Installation
 * ### Download pre-built binaries
   Pre-built binaries are available on the releases page. 
 (Soon) 
@@ -35,15 +35,17 @@ Free, open source and cross-platform app to decrypt, read and view the Whatsapp 
     ```
 > **Note:** Ubuntu users may run into some setup quirks. For guidance, see [#19](https://github.com/absadiki/whatsapp-msgstore-viewer/issues/19) 
 
-# Usage
+## Usage
 To use the app, you will need:
 * The `msgstore.db` (`msgstore.db.cryptX` if it is encrypted) database: It is a database where Whatsapp is storing all your messages.
 * The `wa.db` database: It is a database where Whatsapp is storing contact names. It is optional, so if it is not provided you will just see phone numbers.
 * The `Whatsapp directory`: The directory of Whatsapp in the local storage of your phone. This will be used to view the media files (Optional as well).
-* The `key`: If your database is encrypted, you will need to provide the decryption key to decrypt it first. The decrypted database will be stored in the same directory of your encrypted database suffixed with `-decrypted.db`
+* The `key`: If your database is encrypted, you will need to provide the decryption key to decrypt it first.  
+  If your database is encrypted with <ins>crypt15/e2e</ins> (64‑digit encryption key), you can use `encrypted_backup.key` or convert your <ins>64‑digit key</ins> into a `.txt` file.  
+  The decrypted database will be stored in the same directory of your encrypted database suffixed with `-decrypted.db`
   (See bellow for more information).
 
-# Notes
+## Notes
 * #### Where to find the databases
   Check the great tutorial "[Retrieving WhatsApp Databases](https://github.com/Dexter2389/whatsapp-backup-chat-viewer#retrieving-whatsapp-databases)" made by [@Dexter2389](https://github.com/Dexter2389).
 
@@ -76,10 +78,10 @@ in case there have been any updates to the `msgstore` database.
   `advanced settings` and provide the path to your font.
   - For RTL languages, please see [RTL Support #8](https://github.com/absadiki/whatsapp-msgstore-viewer/discussions/8)
 
-# Contributing
+## Contributing
 If you find a bug, have a suggestion or feedback, please open an issue for discussion.
 
-# Credits
+## Credits
 
 - [kivy](https://kivy.org) & [KivyMD](https://kivymd.readthedocs.io) for the UI framework.
 - [WhatsApp-Redesign](https://github.com/haddiebakrie/WhatsApp-Redesign) for the design inspiration and some UI components.
@@ -90,12 +92,12 @@ If you find a bug, have a suggestion or feedback, please open an issue for discu
 And so many more libraries and frameworks.
 
 
-# License
+## License
 
 This project is licensed under the GNU General Licence version 3 or later. You can modify or redistribute it under the conditions
 of these licences (See [LICENSE](./LICENSE) for more information).
 
-# DISCLAIMER
+## DISCLAIMER
 This project is not endorsed or certified by WhatsApp Inc. and is meant for **personal and educational purposes only**.
 
 It is provided as is without any express or implied warranties.

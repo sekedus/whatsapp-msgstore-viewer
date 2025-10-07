@@ -124,7 +124,7 @@ class whatsappMsgstoreViewer(MDApp):
         self.title = 'Whatsapp Msgstore Viewer'
 
         self.theme_cls.material_style = "M3"
-        self.theme_cls.primary_palette = "Green"
+        self.theme_cls.primary_palette = "Teal"
         self.theme_cls.accent_palette = "Gray"
         self.theme_cls.accent_hue = '200'
         self.theme_cls.primary_dark_hue = '50'
